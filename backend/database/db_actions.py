@@ -22,4 +22,6 @@ def get_image(film_id: int, db: Session):
     header = {
         "Access-Control-Allow-Origin": "*"
     }
+    if not pic_url:
+        return FileResponse(os.path.abspath(f"/backend/media/filler_picture.png"), headers=header)
     return FileResponse(os.path.abspath(f"/backend/{pic_url}"), headers=header)

@@ -5,7 +5,7 @@ class Film(BaseModel):
     id: int
     name: str
     description: str
-    pic_url: str
+    pic_url: str = None
 
     class Config:
         orm_mode = True
