@@ -19,4 +19,7 @@ def get_image(film_id: int, db: Session):
     if not film:
         raise HTTPException(status_code=404)
     pic_url = film.pic_url
-    return FileResponse(os.path.abspath(f"/backend/{pic_url}"))
+    header = {
+        "Access-Control-Allow-Origin": "*"
+    }
+    return FileResponse(os.path.abspath(f"/backend/{pic_url}"), headers=header)

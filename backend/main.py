@@ -1,5 +1,5 @@
 import uvicorn
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, Response
 from sqlalchemy.orm import Session
 
 from database.alchemy import get_db
@@ -12,7 +12,8 @@ app = FastAPI()
 
 
 @app.get("/", response_model=DisplayFilms)
-async def root(db: Session = Depends(get_db)):
+async def root(response: Response, db: Session = Depends(get_db)):
+    response.headers["Access-Control-Allow-Origin"] = "*"
     return get_all_films(db)
 
 
