@@ -14,6 +14,7 @@ class App extends Component {
         return (
             <div>
                 <MainPageComponent/>
+                <Player/>
             </div>
 
         );
