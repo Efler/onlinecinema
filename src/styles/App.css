@@ -4,105 +4,111 @@
     box-sizing: border-box;
 }
 #root {
-    background-image: url(../components/fon.jpg);
+    height: max-content;
+    background-image: url(../../public/images/fon.png);
+    background-size: 160px;
     background-position: left top;
     background-repeat: repeat;
     display: flex;
     justify-content: center;
+    background-color: #3f3f3f;
 }
-.App {
-    width: 1000px;
-    justify-content: center;
-}
-.head {
-    box-shadow: 0 6px 12px 1px #000000;
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    margin: 70px;
-    margin-bottom: 80px;
-    border: 2px solid black;
-    background: linear-gradient(white,lightyellow,lightyellow,lightyellow,lightgrey);
-}
-.text {
-    box-shadow: 0 6px 12px 1px #000000;
-    text-align: center;
-    padding: 15px;
-    margin: 15px;
-    border: 2px solid black;
-    background: linear-gradient(white,lightgrey);
-}
-.text1{
-    display: flex;
-    padding: 15px;
-    margin: 15px;
-    background: lightyellow;
-}
-.text2{
-    justify-content: center;
-    display: flex;
-    padding: 15px;
-    margin: 15px;
-    background: lightyellow;
-}
-.link{
-    box-shadow: 0 6px 12px 1px #000000;
-    text-align: center;
-    padding: 15px;
-    margin: 40px;
-    border: 2px solid black;
-    background: linear-gradient(white,lightyellow,lightyellow,lightyellow,lightgrey);
-}
-.link2{
-    font-family: 'Rubik One', sans-serif;
-    text-decoration: underline;
-    font-size: 30px;
-    background: linear-gradient(45deg, red , orange , darkorange, green, blue, purple);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #0B2349;
-}
-.post {
-    box-shadow: 0 6px 12px 1px #000000;
-    border: 2px solid black;
-    background: linear-gradient(white,lightyellow,lightyellow,lightyellow,lightgrey);
-    padding: 30px;
-    margin-top: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
-    padding-top: 40px;
-}
+/*.App {*/
+/*    width: 1000px;*/
+/*    justify-content: center;*/
+/*}*/
+
 .img {
-    box-shadow: 28px 26px 10px 0px rgba(0, 0, 0, 0.31);
-    display: flex;
-    justify-content: center;
-    margin-bottom: 70px;
-    align-items: flex-end;
+    width: 281px;
+    height: 400px;
+    margin-right: 30px;
 }
-.likes {
-    margin-left: 90px;
-    display: flex;
-    align-items: center;
-    horiz-align: center;
+.card {
+    width: 1000px;
+    margin: 80px;
+    padding: 40px;
+    background: #262626;
+    -webkit-box-shadow: 0px 0px 14px 8px rgba(229, 19, 19, 0.6);
+    -moz-box-shadow: 0px 0px 14px 8px rgba(229, 19, 19, 0.6);
+    box-shadow: 0px 0px 14px 8px rgba(229, 19, 19, 0.6);
 }
-.button {
-    margin-left: 20px;
+.title {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    color: azure;
+    float: right;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.body {
+    line-height: 24px;
+    width: 600px;
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    color: azure;
+    float: right;
+    margin-top: -300px;
+}
+.buttons {
+    margin: 10px;
+    margin-bottom: -15px;
+    padding: 10px;
+}
+.star {
+    margin-left: -21px;
+    width: 284px;
     font-weight: 700;
     color: white;
     text-decoration: none;
     padding: .8em 1em calc(.8em + 3px);
-    border-radius: 3px;
-    background: rgb(64,199,129);
-    box-shadow: 0 -3px rgb(53,167,110) inset;
-    transition: 0.2s;
+    background: rgb(224, 44, 44);
+    box-shadow: 0 -3px rgb(141, 40, 40) inset;
 }
-.button:hover { background: rgb(53, 167, 110); }
-.button:active {
-  background: rgb(33,147,90);
-  box-shadow: 0 3px rgb(33,147,90) inset;
+.star:hover {
+    background: rgb(175, 48, 48);
 }
-.comment{
-    margin-left: 20px;
+.star:active {
+  background: rgb(117, 20, 20);
+  box-shadow: 0 3px rgb(117, 20, 20) inset;
+}
+.link {
+    margin-left: 10px;
+    width: 600px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    background: rgb(224, 44, 44);
+    box-shadow: 0 -3px rgb(141, 40, 40) inset;
+}
+.link:hover {
+    background: rgb(175, 48, 48);
+}
+.link:active {
+  background: rgb(117, 20, 20);
+  box-shadow: 0 3px rgb(117, 20, 20) inset;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+    margin-top: -30px;
+    padding: 50px;
+    background: rgb(224, 44, 44);
+    color: white;
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 8px 17px 14px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 8px 17px 14px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 8px 17px 14px rgba(0, 0, 0, 0.6);
+}
+.line {
+    margin-top: -340px;
+    display: flex;
+    float: right;
+    width: 600px;
+    box-shadow: unset;
 }
