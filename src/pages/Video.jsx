@@ -1,9 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {useParams} from "react-router-dom";
+import Card from "../components/Card";
+import '../styles/App.css';
 
-const Video = () => {
-    return (  //сюда по идее нужно будет пизать плеер, паралельно вытаскивая id
+
+
+const Video = (props) => {
+    const params = useParams();
+    let present_video = [];
+    {props.cards.map(card => {
+        if(card.id.includes(params.id)){
+            present_video = card;
+        }
+    }
+    )}
+    return (
         <div>
-            ВВВВВВВВВВААААУУУУ ФФФФФФФФФФФФФИИИИИИИИИИЛЬЬЬМ!!!!!!!!!
+            <div className="head3"><b>{present_video.title}</b></div>
+            <Card card={present_video} key={present_video.id} page='video'/>
         </div>
     );
 };

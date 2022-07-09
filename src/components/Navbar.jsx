@@ -6,7 +6,7 @@ const Navbar = () => { //панель сверху сайта
         <div className="navbar">
             <div className="li">
                 <li className="lia">
-                    <Link to='/home'>Каталог</Link>
+                    <Link to='/'>Фильмы</Link>
                     <Link to='/favourites'>Избранное</Link>
                 </li>
             </div>
