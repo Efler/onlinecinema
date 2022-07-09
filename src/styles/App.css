@@ -45,6 +45,14 @@
     font-size: 30px;
     margin-bottom: 20px;
 }
+.title2 {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    color: azure;
+    float: right;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 .body {
     line-height: 24px;
     width: 600px;
@@ -54,7 +62,20 @@
     float: right;
     margin-top: -300px;
 }
+.body2 {
+    line-height: 30px;
+    width: fit-content;
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    color: azure;
+    font-size: 20px;
+}
 .buttons {
+    margin: 10px;
+    margin-bottom: -15px;
+    padding: 10px;
+}
+.buttons2 {
     margin: 10px;
     margin-bottom: -15px;
     padding: 10px;
@@ -69,12 +90,30 @@
     background: rgb(224, 44, 44);
     box-shadow: 0 -3px rgb(141, 40, 40) inset;
 }
+.star2 {
+    margin-top: 20px;
+    margin-left: 2px;
+    width: 100%;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    background: rgba(45, 24, 215);
+    box-shadow: 0 -3px rgb(25, 12, 112) inset;
+}
 .star:hover {
     background: rgb(175, 48, 48);
 }
 .star:active {
   background: rgb(117, 20, 20);
   box-shadow: 0 3px rgb(117, 20, 20) inset;
+}
+.star2:hover {
+    background: rgb(39, 25, 159);
+}
+.star2:active {
+  background: rgb(17, 10, 96);
+  box-shadow: 0 3px rgb(17, 10, 96) inset;
 }
 .link {
     margin-left: 10px;
@@ -152,6 +191,13 @@
     box-shadow: 0px 8px 17px 14px rgba(0, 0, 0, 0.6);
 }
 .line {
+    margin-top: -340px;
+    display: flex;
+    float: right;
+    width: 600px;
+    box-shadow: unset;
+}
+.line2 {
     margin-top: -340px;
     display: flex;
     float: right;

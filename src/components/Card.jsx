@@ -14,22 +14,27 @@ const Card = (props) => {
     const navigate = useNavigate(); //функция для кнопки, чтобы переадресоваться на страницу с нужным видео
     const button_link = () => navigate(`/video/${props.card.id}`, {replace: true});
 
+    const ppp = create_pic_url(props.card.img_id);
+
     if(props.page === "video"){
         return ( //просто элементы, которые отрисовываются из переданных данных, сам компонент очень гибкий, вроде все хавает
         <div className="card2">
-            <img className="img" src={create_pic_url(props.card.img_id)} alt=""/>
+            {/*<img className="img" src={ppp} alt=""/>*/}
             {/*<h1>{create_pic_url(props.card.img_id)}</h1>*/}
-            <strong className="title">{props.card.title}</strong>
-            <hr className="line"/>
-            <strong className="body">
+            {/*<strong className="title2">{props.card.title}</strong>*/}
+            <hr className="line2"/>
+            <strong className="body2">
                 {props.card.body}
             </strong>
+            <div className="buttons2">
+                <button className="star2">В Избранное</button>
+            </div>
         </div>
     );
     }
     return ( //просто элементы, которые отрисовываются из переданных данных, сам компонент очень гибкий, вроде все хавает
         <div className="card">
-            <img className="img" src={create_pic_url(props.card.img_id)} alt=""/>
+            <img className="img" src={ppp} alt=""/>
             {/*<h1>{create_pic_url(props.card.img_id)}</h1>*/}
             <strong className="title">{props.card.title}</strong>
             <hr className="line"/>
