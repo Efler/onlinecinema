@@ -23,6 +23,9 @@ const Video = (props) => {
         <div>
             <div className="head3"><b>{present_video.title}</b></div>
             <Card card={present_video} key={present_video.id} page='video' change={changeStar}/>
+            <div className="fill">
+                    fff
+            </div>
         </div>
     );
 };

@@ -23,7 +23,11 @@ const Favourites = (props) => {
                 {present_fav.map(present =>
                     <Card card={present} key={present.id} page='fav1' change={changeStar}/>
             )}
+                <div className="fill">
+                    fff
+                </div>
             </div>
+
         );
     }else{
         return (
@@ -31,6 +35,9 @@ const Favourites = (props) => {
                 <div className="head2"><b>Избранное</b></div>
                 <div className="empty">
                     <h1 className="pysto">Пусто</h1>
+                </div>
+                <div className="fill">
+                    fff
                 </div>
             </div>
         );

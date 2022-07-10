@@ -119,19 +119,18 @@ const Card = (props) => {
 
     if(props.page === "fav1"){
         return ( //просто элементы, которые отрисовываются из переданных данных, сам компонент очень гибкий, вроде все хавает
-        <div className="card3">
-            <img className="img" src={ppp} alt=""/>
-            {/*<h1>{create_pic_url(props.card.img_id)}</h1>*/}
-            <strong className="title">{props.card.title}</strong>
-            <hr className="line"/>
-            <strong className="body">
-                {props.card.body}
-            </strong>
-            <div className="buttons">
-                <button className="star3" onClick={star3x1}>{star_text}</button> <button className="link3" onClick={button_link}>Смотреть</button>
-            </div>
-            <div className="fill">
-                fff
+        <div>
+            <div className="card3">
+                <img className="img" src={ppp} alt=""/>
+                {/*<h1>{create_pic_url(props.card.img_id)}</h1>*/}
+                <strong className="title">{props.card.title}</strong>
+                <hr className="line"/>
+                <strong className="body">
+                    {props.card.body}
+                </strong>
+                <div className="buttons">
+                    <button className="star3" onClick={star3x1}>{star_text}</button> <button className="link3" onClick={button_link}>Смотреть</button>
+                </div>
             </div>
         </div>
     );
