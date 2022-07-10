@@ -204,8 +204,9 @@
     z-index: 222;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: fit-content;
     height: 50px;
+    margin: auto;
     margin-bottom: 50px;
     margin-top: -90px;
     padding: 50px;
@@ -219,11 +220,12 @@
     box-shadow: 0px 8px 17px 14px rgba(0, 0, 0, 0.6);
 }
 .head3 {
+    margin: auto;
     position: relative;
     z-index: 222;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: fit-content;
     height: 50px;
     margin-bottom: 50px;
     margin-top: -90px;
@@ -238,11 +240,12 @@
     box-shadow: 0px 8px 17px 14px rgba(0, 0, 0, 0.6);
 }
 .head2 {
+    margin: auto;
     position: relative;
     z-index: 223;
     display: flex;
     justify-content: center;
-    width: 1160px;
+    width: fit-content;
     height: 50px;
     margin-left: -15px;
     margin-bottom: 50px;
