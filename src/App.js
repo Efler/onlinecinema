@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './styles/App.css';
 import Home from "./pages/Home";
 import Favourites from "./pages/Favourites";
+import Favourites1 from "./pages/Favourites1";
 import Video from "./pages/Video";
 import {
     BrowserRouter,
@@ -11,8 +12,9 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
+
 function App(){                                           //данные
-    const [cards, setCards] = useState([
+    const cards = [
         {title: "Бойцовский клуб", body: "Сотрудник страховой компании страдает хронической бессонницей " +
                 "и отчаянно пытается вырваться из мучительно скучной жизни. Однажды в очередной командировке " +
                 "он встречает некоего Тайлера Дёрдена — харизматического торговца мылом с извращенной философией. " +
@@ -22,7 +24,7 @@ function App(){                                           //данные
                 "Проходит немного времени, и вот уже новые друзья лупят друг друга почем зря на стоянке перед " +
                 "баром, и очищающий мордобой доставляет им высшее блаженство. Приобщая других мужчин к простым " +
                 "радостям физической жестокости, они основывают тайный Бойцовский клуб, который начинает пользоваться " +
-                "невероятной популярностью.", img_id: "fight_club.jpg", id:"fc"},
+                "невероятной популярностью.", img_id: "fight_club.jpg", id:"fc", star: 0},
 
         {title: "Пила 5", body: "Один из последователей маньяка-убийцы Пилы, Марк Хоффман, следуя заветам своего " +
                 "кровавого гуру, готовит очередную смертельную головоломку. Тем временем агент Страм начинает " +
@@ -31,7 +33,7 @@ function App(){                                           //данные
                 "\n" +
                 "Пятерых незнакомых друг с другом людей уже ждёт жестокий урок командной игры на выживание — " +
                 "ещё больше крови, ещё изощреннее ловушки… Страм идёт по следам Хоффмана, пытаясь докопаться до причин, " +
-                "по которым он присоединился к Пиле.", img_id: "saw.jpeg", id:"sw"},
+                "по которым он присоединился к Пиле.", img_id: "saw.jpeg", id:"sw", star: 0},
 
         {title: "Дюна", body: "Наследник знаменитого дома Атрейдесов Пол отправляется вместе с семьей на " +
                 "одну из самых опасных планет во Вселенной — Арракис. Здесь нет ничего, кроме песка, палящего " +
@@ -39,15 +41,30 @@ function App(){                                           //данные
                 "ресурса, который называется меланж. В результате захвата власти Пол вынужден бежать и " +
                 "скрываться, и это становится началом его эпического путешествия. Враждебный мир Арракиса " +
                 "приготовил для него множество тяжелых испытаний, но только тот, кто готов взглянуть в глаза " +
-                "своему страху, достоин стать избранным.", img_id: "dune.jpg", id:"dn"},
-    ])
+                "своему страху, достоин стать избранным.", img_id: "dune.jpg", id:"dn", star: 0},
+    ]
+
+    const changeStar = (iddd) => {
+        cards.map(card => {
+                if(card.id === iddd){
+                    card.star === 0 ?
+                        card.star = 1
+                    :
+                        card.star = 0
+                }
+            }
+        )
+        console.log("да"+iddd)
+    }
+
     return(                                       //маршрутизация
         <BrowserRouter>
             <Navbar/>
             <Routes>
-                <Route path='/' element={<Home cards={cards}/>}/>
-                <Route path='/favourites' element={<Favourites/>}/>
-                <Route path='/video/:id' element={<Video cards={cards}/>}/>
+                <Route path='/' element={<Home cards={cards} change={changeStar}/>}/>
+                <Route path='/favourites' element={<Favourites cards={cards} change={changeStar}/>}/>
+                <Route path='/favourites1' element={<Favourites1 cards={cards} change={changeStar}/>}/>
+                <Route path='/video/:id' element={<Video cards={cards} change={changeStar}/>}/>
                 <Route
                     path="*"
                     element={<Navigate to="/" replace />}

@@ -15,12 +15,13 @@ const Favourites = (props) => {
         }
     )}
 
+
     if(present_fav.length > 0){
         return (                //избранное
             <div className="Home">
                 <div className="head2"><b>Избранное</b></div>
                 {present_fav.map(present =>
-                    <Card card={present} key={present.id} page='fav' change={changeStar}/>
+                    <Card card={present} key={present.id} page='fav1' change={changeStar}/>
             )}
             </div>
         );
@@ -36,5 +37,6 @@ const Favourites = (props) => {
     }
 
 };
+
 
 export default Favourites;
