@@ -16,9 +16,6 @@ function Home(props) {
         {props.cards.map(card =>
             <Card card={card} key={card.id} page='home' change={changeStar}/>
         )}
-        <div className="fill">
-                    fff
-        </div>
     </div>
   );
 }

@@ -37,6 +37,9 @@ const Favourites = (props) => {
                 <div className="fill">
                     fff
                 </div>
+                <div className="fill">
+                    fff
+                </div>
             </div>
         );
     }
