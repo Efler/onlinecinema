@@ -6,8 +6,9 @@ from backend.database.alchemy import Base
 class DbFilm(Base):
     __tablename__ = 'film_table'
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
+    title = Column(String)
     description = Column(String)
+    magnet_url = Column(String)
     pic_url = Column(String)
 
 
