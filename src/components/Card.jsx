@@ -80,12 +80,12 @@ const Card = (props) => {
             <div className="card2">
                 <hr className="line2"/>
                 <strong className="body2">
-                    <Player card={props.card}/>
                     {props.card.description}
                 </strong>
                 <div className="buttons2">
                     <button className="star2" onClick={star2x}>{star_text}</button>
                 </div>
+                 <Player card={props.card}/>
             </div>
         );
     }

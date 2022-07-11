@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import './styles/App.css';
 import Home from "./pages/Home";
 import Favourites from "./pages/Favourites";
